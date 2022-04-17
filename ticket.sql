@@ -28,7 +28,7 @@ CREATE TABLE `chitietvexe` (
   `maChiTietVe` int NOT NULL AUTO_INCREMENT,
   `maVe` int NOT NULL,
   `maXe` int NOT NULL,
-  `maNV` int NOT NULL,
+  `maNv` int NOT NULL,
   `ghiChu` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `viTriGhe` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`maChiTietVe`),
@@ -129,16 +129,16 @@ DROP TABLE IF EXISTS `nhanvien`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `nhanvien` (
-  `maNV` int NOT NULL AUTO_INCREMENT,
-  `tenNV` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `maNv` int NOT NULL AUTO_INCREMENT,
+  `tenNv` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ngaySinh` datetime DEFAULT NULL,
   `gioiTinh` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `diaChi` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `dienThoai` int DEFAULT NULL,
   `loaiNv` int DEFAULT NULL,
-  PRIMARY KEY (`maNV`),
-  KEY `loaiNV_idx` (`loaiNv`),
-  CONSTRAINT `loaiNV` FOREIGN KEY (`loaiNv`) REFERENCES `loainhanvien` (`maLoaiNv`)
+  PRIMARY KEY (`maNv`),
+  KEY `loaiNv_idx` (`loaiNv`),
+  CONSTRAINT `loaiNv` FOREIGN KEY (`loaiNv`) REFERENCES `loainhanvien` (`maLoaiNv`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -161,9 +161,9 @@ DROP TABLE IF EXISTS `tuyenxe`;
 CREATE TABLE `tuyenxe` (
   `maTuyen` int NOT NULL AUTO_INCREMENT,
   `tenTuyen` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `diemdi` int DEFAULT NULL,
+  `diemDi` int DEFAULT NULL,
   `bangGia` double DEFAULT NULL,
-  `diemden` int DEFAULT NULL,
+  `diemDen` int DEFAULT NULL,
   PRIMARY KEY (`maTuyen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
