@@ -82,8 +82,8 @@ DROP TABLE IF EXISTS `khachhang`;
 CREATE TABLE `khachhang` (
   `maKh` int NOT NULL AUTO_INCREMENT,
   `tenKh` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gioiTinh` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `diaChi` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gioiTinh` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `diaChi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `dienThoai` int DEFAULT NULL,
   PRIMARY KEY (`maKh`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -132,8 +132,8 @@ CREATE TABLE `nhanvien` (
   `maNv` int NOT NULL AUTO_INCREMENT,
   `tenNv` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ngaySinh` datetime DEFAULT NULL,
-  `gioiTinh` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `diaChi` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gioiTinh` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `diaChi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `dienThoai` int DEFAULT NULL,
   `loaiNv` int DEFAULT NULL,
   PRIMARY KEY (`maNv`),
@@ -161,9 +161,9 @@ DROP TABLE IF EXISTS `tuyenxe`;
 CREATE TABLE `tuyenxe` (
   `maTuyen` int NOT NULL AUTO_INCREMENT,
   `tenTuyen` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `diemDi` int DEFAULT NULL,
+  `diemDi` varchar(255) DEFAULT NULL,
   `bangGia` double DEFAULT NULL,
-  `diemDen` int DEFAULT NULL,
+  `diemDen` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`maTuyen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -212,8 +212,8 @@ DROP TABLE IF EXISTS `xe`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `xe` (
   `maXe` int NOT NULL AUTO_INCREMENT,
-  `tenXe` varchar(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `banSo` varchar(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tenXe` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banSo` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `soGhe` int DEFAULT NULL,
   PRIMARY KEY (`maXe`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
