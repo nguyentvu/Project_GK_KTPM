@@ -11,8 +11,8 @@ import java.sql.SQLException;
  * @author inmac
  */
 public class JdbcUtils {
-    private Connection conn;
     
+    private Connection conn;
     
     static{
         try {
@@ -22,7 +22,7 @@ public class JdbcUtils {
         }
     }
     public static Connection getConn() throws SQLException{
-        return DriverManager.getConnection("jdbc:mysql://localhost/SaleTicketApp",
+        return DriverManager.getConnection("jdbc:mysql://localhost/ticketdb",
                 "root", "1234");
     }
 }
